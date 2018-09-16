@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "Firefox >= 30",
+            "Chrome >= 40",
+            "ie >= 10",
+            "Safari >= 7"
+          ]
+        },
+        "modules": false,
+        "useBuiltIns": true
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": [
+    [
+      "component",
+      [
+        {
+          "libraryName": "element-ui",
+          "styleLibraryName": "theme-chalk"
+        }
+      ]
+    ]
+  ]
+}
