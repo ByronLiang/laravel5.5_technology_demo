@@ -6,7 +6,7 @@ Route::group(['middleware' => 'auth:web'], function () {
 
 });
 
-// Route::get('home', 'HomeController@index');
+Route::get('new_test', 'TestController@index');
 Route::get('cache', 'HomeController@cacheOption');
 
 Route::group(['middleware' => ['spa:webapp']], function () {
@@ -23,8 +23,5 @@ Route::group(['middleware' => ['spa:webapp']], function () {
 		Route::resource('message', 'ChatController');
 	});
 	Route::get('test', 'HomeController@test');
-	// Route::get('/welcome', function () {
-	//     return view('welcome');
-	// });
 	Route::view('{capture?}', 'webapp')->where(['capture' => '.*']);
 });
