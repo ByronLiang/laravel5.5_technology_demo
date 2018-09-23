@@ -29,8 +29,8 @@ mix
     .setPublicPath('public')
     .js('resources/assets/admin/app.js', 'static/js/admin.js')
     .sass('resources/assets/admin/scss/app.scss', 'static/css/admin.css')
-    // .js('resources/assets/web/app.js', 'static/js/web.js')
-    // .sass('resources/assets/web/scss/app.scss', 'static/css/web.css')
+    .js('resources/assets/webapp/web/app.js', 'static/js/webapp.js')
+    .sass('resources/assets/webapp/web/scss/app.scss', 'static/css/webapp.css')
     // .sourceMaps(true, 'source-map') //源代码调试专用，开启会导致编译过慢
     .webpackConfig({
         output: {
@@ -38,20 +38,20 @@ mix
             // chunkFilename: 'static/js/[name]' + (mix.inProduction() ? '.[chunkhash]' : '') + '.js',
             chunkFilename: 'static/chunk/[name].js' + (mix.inProduction() ? '?[chunkhash]' : ''),
         },
-        module: {
-            rules: [
-                {
-                    test: /\.(js|vue)$/,
-                    loader: 'eslint-loader',
-                    enforce: 'pre',
-                    exclude: /(node_modules)/,
-                    options: {
-                        // fix: true,
-                        formatter: require('eslint-friendly-formatter'),
-                    },
-                },
-            ],
-        },
+        // module: {
+        //     rules: [
+        //         {
+        //             test: /\.(js|vue)$/,
+        //             loader: 'eslint-loader',
+        //             enforce: 'pre',
+        //             exclude: /(node_modules)/,
+        //             options: {
+        //                 // fix: true,
+        //                 formatter: require('eslint-friendly-formatter'),
+        //             },
+        //         },
+        //     ],
+        // },
         resolve: {
             alias: {
                 'axios': 'axios/dist/axios.min.js',
