@@ -17,4 +17,5 @@
         <div id="app"></div>
         <script src="{{ mix('/static/js/webapp.js') }}"></script>
     </body>
+    
 </html>

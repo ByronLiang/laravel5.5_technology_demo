@@ -13,13 +13,21 @@ export default {
         };
     },
     created() {
+        this.initEcho();
         this.fetchData();
+        console.log('init finish');
     },
     mounted() {
+        // this.initEcho();
     },
     methods: {
         fetchData() {
 
+        },
+        initEcho() {
+            Echo.channel('news').listen('News', (e) => {
+                console.log(e.message);
+            });
         },
     },
 };
